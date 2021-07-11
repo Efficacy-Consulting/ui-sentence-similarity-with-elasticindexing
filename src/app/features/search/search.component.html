@@ -1,0 +1,17 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#eb9917" type = "pacman" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+<div class="container">
+  <div class="form-group mb-2">
+    <label>Enter Search String</label>
+    <input class="form-control col-4" type="text" [(ngModel)]="searchString" (keyup.enter)="search()" required>
+  </div>
+  <button type="button" class="btn-group mr-2 btn btn-primary" (click)="search()">Search</button>
+  
+  <div class="mt-4">
+    <input type="checkbox" [checked]="advancedSettings" (change)="advancedSettings = !advancedSettings" /> Advanced Settings
+  </div>
+  
+  <div class="mt-2" *ngIf="advancedSettings">
+    <label>Enter params for finding the similarity</label>
+    <json-editor [options]="options" [data]="data"></json-editor>
+  </div>
+</div>
