@@ -1,0 +1,22 @@
+$lineHeight: 1.8em;
+
+.similarity-splitter-container {
+  width: 100%;
+  height: 75%;
+  display: grid;
+}
+
+ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+li p {
+  font: 12px/1.5 Helvetica, sans-serif;
+  color: #555;
+
+  display: block;/* or inline-block */
+  overflow: hidden;
+  max-height: $lineHeight * 3;
+  line-height: $lineHeight;
+}
