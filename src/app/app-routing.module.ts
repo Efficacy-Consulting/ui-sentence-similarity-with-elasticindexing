@@ -12,6 +12,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/search/search.module').then((m) => m.SearchModule),
   },
+  { path: 'start-index', loadChildren: () => import('./features/start-index/start-index.module').then(m => m.StartIndexModule) }
 ];
 
 @NgModule({
