@@ -1,0 +1,11 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#eb9917" type = "pacman" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+<div class="form-group">
+  <label>Enter params to start indexing</label>
+  <json-editor [options]="options" [data]="startIndexingParams"></json-editor>
+</div>
+
+<div class="form-group">
+  <h6>Click to begin adding all documents to Elasticsearch</h6>
+  <button type="button" class="btn btn-primary" (click)="startIndexing()">Start Indexing</button>
+</div>
+<div *ngIf="completed">Documents are successfully stored into Elasticsearch</div>
